@@ -1,0 +1,65 @@
+@import "settings";
+@import "foundation";
+@import "variables";
+@import "weather-icons";
+
+$header-height: 50px;
+
+body{
+	background-color: $sunny-warm;
+}
+
+::-webkit-input-placeholder {
+   color: lighten($sunny-warm-header, 30%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: lighten($sunny-warm-header, 30%);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: lighten($sunny-warm-header, 30%);
+}
+
+:-ms-input-placeholder {  
+   color: lighten($sunny-warm-header, 30%);
+}
+
+input:focus{
+    outline: none;
+}
+
+header{
+	background-color: $sunny-warm-header;
+	height: $header-height;
+	width: 100%;
+}
+
+.prompt input#city-input{
+	box-shadow: none;
+	outline: none;
+	background: transparent;
+	border: none;
+	color: white;
+	font-size: $prompt-font-size;
+	width: 100%;
+	padding: $header-height/2 0;
+	overflow: hidden;
+}
+
+.main{
+	text-align: center;
+	margin-top: 5%;
+
+	.columns{
+		h3{
+			color: white;
+		}
+
+		.weather-icon{
+			color: white;
+			font-size: $weather-icon-font-size;
+			padding: 10px 0;
+		}
+	}
+}
