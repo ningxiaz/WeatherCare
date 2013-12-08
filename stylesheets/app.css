@@ -7709,6 +7709,37 @@ th.hide-for-touch {
 */
 /* Colors */
 /* Typography */
+/* 16 x 4 = 64 */
+/* 16 x 2.5 = 40 */
+/* 16 x 1.5 = 24 */
+/* 16 x 1.125 = 18 */
+/* 16 x 1 = 16 */
+/* line 26, ../scss/globals.scss */
+body {
+  font-size: 100%;
+}
+
+/* line 27, ../scss/globals.scss */
+h1 {
+  font-size: 4em;
+}
+
+/* line 28, ../scss/globals.scss */
+h2 {
+  font-size: 2.5em;
+}
+
+/* line 29, ../scss/globals.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 30, ../scss/globals.scss */
+p {
+  font-size: 1em;
+}
+
+/* Mixins */
 /*
  *  Weather Icons Beta 1
  *  Weather themed icons for Bootstrap
@@ -8225,70 +8256,189 @@ th.hide-for-touch {
   content: "\f061";
 }
 
-/* line 8, ../scss/app.scss */
+/* line 9, ../scss/app.scss */
 body {
   background-color: #f39c12;
+  height: 100%;
 }
 
-/* line 12, ../scss/app.scss */
+/* line 14, ../scss/app.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 20, ../scss/app.scss */
 ::-webkit-input-placeholder {
   color: #f9e8a0;
 }
 
-/* line 16, ../scss/app.scss */
+/* line 24, ../scss/app.scss */
 :-moz-placeholder {
   /* Firefox 18- */
   color: #f9e8a0;
 }
 
-/* line 20, ../scss/app.scss */
+/* line 28, ../scss/app.scss */
 ::-moz-placeholder {
   /* Firefox 19+ */
   color: #f9e8a0;
 }
 
-/* line 24, ../scss/app.scss */
+/* line 32, ../scss/app.scss */
 :-ms-input-placeholder {
   color: #f9e8a0;
 }
 
-/* line 28, ../scss/app.scss */
+/* line 36, ../scss/app.scss */
 input:focus {
   outline: none;
 }
 
-/* line 32, ../scss/app.scss */
-header {
-  background-color: #f1c40f;
-  height: 50px;
-  width: 100%;
+/* line 40, ../scss/app.scss */
+.clear {
+  clear: both;
 }
 
-/* line 38, ../scss/app.scss */
-.prompt input#city-input {
+/* line 44, ../scss/app.scss */
+header {
+  width: 100%;
+  padding-top: 10px;
+}
+/* line 48, ../scss/app.scss */
+header .girl {
+  background: url(../images/girl.png) no-repeat;
+  background-size: 40px auto;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 10px;
+}
+/* line 57, ../scss/app.scss */
+header .prompt {
+  color: white;
+  font-size: 1.125em;
+  padding: 0.625em 1.125em;
+  -webkit-border-radius: 1.125em;
+  -moz-border-radius: 1.125em;
+  -ms-border-radius: 1.125em;
+  -o-border-radius: 1.125em;
+  border-radius: 1.125em;
+  background-color: #f1c40f;
+  float: left;
+  margin-right: 20px;
+}
+/* line 66, ../scss/app.scss */
+header .add {
+  color: white;
+  background-color: #f1c40f;
+  font-weight: bolder;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 38px;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+  float: left;
+  cursor: pointer;
+}
+
+/* line 81, ../scss/app.scss */
+.search-page {
+  background-color: #f1c40f;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding-top: 40px;
+  display: none;
+  height: 900px;
+  top: -900;
+}
+/* line 94, ../scss/app.scss */
+.search-page input#city-input {
   box-shadow: none;
   outline: none;
-  background: transparent;
+  background: white;
   border: none;
-  color: white;
-  font-size: 26px;
+  color: #f1c40f;
+  font-size: 1.6875rem;
   width: 100%;
-  padding: 25px 0;
   overflow: hidden;
+  padding: 1.6875rem;
+  -webkit-border-radius: 1.6875rem;
+  -moz-border-radius: 1.6875rem;
+  -ms-border-radius: 1.6875rem;
+  -o-border-radius: 1.6875rem;
+  border-radius: 1.6875rem;
+  display: block;
+}
+/* line 107, ../scss/app.scss */
+.search-page .suggestions {
+  background-color: white;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+/* line 113, ../scss/app.scss */
+.search-page .suggestions .item {
+  color: #999999;
+  font-size: 1.6875rem;
+  border-bottom: 1px #cccccc solid;
+  padding: 0.84375rem 1.6875rem;
+  cursor: pointer;
+}
+/* line 121, ../scss/app.scss */
+.search-page .suggestions .item:hover {
+  color: #f1c40f;
+}
+/* line 126, ../scss/app.scss */
+.search-page .round-button {
+  padding: 0.9375rem 1.6875rem;
+  -webkit-border-radius: 1.6875rem;
+  -moz-border-radius: 1.6875rem;
+  -ms-border-radius: 1.6875rem;
+  -o-border-radius: 1.6875rem;
+  border-radius: 1.6875rem;
+  background-color: transparent;
+  border: 1px white solid;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
 }
 
-/* line 50, ../scss/app.scss */
+/* line 137, ../scss/app.scss */
 .main {
   text-align: center;
   margin-top: 5%;
 }
-/* line 55, ../scss/app.scss */
-.main .columns h3 {
+/* line 142, ../scss/app.scss */
+.main .columns h2 {
   color: white;
+  margin-bottom: 30px;
 }
-/* line 59, ../scss/app.scss */
+/* line 147, ../scss/app.scss */
 .main .columns .weather-icon {
   color: white;
-  font-size: 96px;
-  padding: 10px 0;
+  font-size: 128px;
+  padding: 30px 0;
+}
+/* line 153, ../scss/app.scss */
+.main .columns .details {
+  color: white;
+}
+/* line 156, ../scss/app.scss */
+.main .columns .details i {
+  padding-right: 10px;
+  font-size: 1.5em;
 }
