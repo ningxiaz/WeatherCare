@@ -21,6 +21,7 @@ var UIControls = (function(){
     var prompt = $('header .prompt');
     var start_add = $('#add-current'); // the add button in the start page
     var cancel = $('.cancel');
+    var start_page = $('.start-page');
 
     /**
      * binding events to the DOM objects
@@ -29,13 +30,14 @@ var UIControls = (function(){
         // make search page always cover the whole view point
         $(window).resize(function(){
             search_page.css('height', window.innerHeight);
+            start_page.css('height', window.innerHeight);
         });
 
         start_add.click(function(){
             search_page.css('height', window.innerHeight);
             input.attr('placeholder', 'Where are you?');
             search_page.show();
-            $('.start-page').fadeOut(200);
+            start_page.fadeOut(200);
         });
 
         input.keyup(function(){
@@ -43,7 +45,11 @@ var UIControls = (function(){
             if(input.val() != ''){
                 WeatherManager.searchCities(input.val(), appendSuggestions);
             }
-        })
+        });
+
+        cancel.click(function(){
+            search_page.slideUp(200);
+        });
 
         add_button.click(function(){
             new_weather = {};
@@ -70,11 +76,12 @@ var UIControls = (function(){
                         search_page.slideUp(200);
                         places.push(city);
                         current = places.length - 1;
-                        prompt.text('Added successful!');
+                        prompt.text('Added successfully!');
                         showCurrent(new_weather);
+                        showTips(new_weather);
                     }
                     else{
-                        prompt.text('Added successful!');
+                        prompt.text('Added successfully!');
                     }
                 });
             }
@@ -85,6 +92,7 @@ var UIControls = (function(){
      * append suggestions to the search box given the lists of places
      */
     function appendSuggestions(cities){
+        suggestions.empty();
         for(i = 0; i < cities.length; i++){
             var city_name = cities[i].name
             if(city_name != undefined && city_name != ''){
@@ -145,6 +153,16 @@ var UIControls = (function(){
         $('span#wind-speed').text(weather.wind_speed);
         $('span#clouds').text(weather.clouds);
         changeColorThemes(weather.weather_icon);
+        $(".city").text(weather.name);
+    }
+
+    /**
+     * display tips according to the weather
+     */
+    function showTips(weather){
+        $('.weather-tip span').text(TipGenerator.getWeatherTip(weather.weather_icon));
+        $('.temp-tip span').text(TipGenerator.getTempTip(weather.temp));
+        $('.humidity-tip span').text(TipGenerator.getHumidityTip(weather.humidity));
     }
 
     /**
@@ -173,10 +191,11 @@ var UIControls = (function(){
         $('.suggestions .item').hover(function(){
             $(this).css('color', WeatherColors[weather_icon].minor);
         });
+        $('.city').css('background-color', WeatherColors[weather_icon].minor);
+
         styleButton(add_button, WeatherColors[weather_icon].major);
         styleButton(add_done, WeatherColors[weather_icon].minor);
         styleButton(cancel, WeatherColors[weather_icon].minor)
-        
     }
 
     /**
@@ -197,6 +216,25 @@ var UIControls = (function(){
 	return {
 		init: function(){
 			bindUIActions();
+
+            // fill the page to the full screen
+            search_page.css('height', window.innerHeight);
+            start_page.css('height', window.innerHeight);
+
+            // init with Palo Alto as default
+            city = 'Palo Alto'
+            WeatherManager.getForcast(city, function(data){
+                saveForcast(data);
+                showForcast(new_weather);
+            });
+
+            WeatherManager.getCurrent(city, function(data){
+                saveCurrent(data);
+                places.push(city);
+                current = places.length - 1;
+                showCurrent(new_weather);
+                showTips(new_weather);
+            });
 		}
 	}
 }());
