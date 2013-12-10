@@ -1,14 +1,14 @@
 /**
-*   This module connects with the API and get the weather data
-*   from http://openweathermap.org/API
-**/
+ * This module connects with the API and get the weather data
+ * from http://openweathermap.org/API
+ */
 
 
 var WeatherManager = (function(){
 
     function searchCities(query, callback){
         console.log(query)
-        $.getJSON("http://api.openweathermap.org/data/2.5/find?type=like&mode=json&q=" + query + "&callback=?", function(json) {
+        $.getJSON("http://api.openweathermap.org/data/2.5/find?mode=json&q=" + query + "&callback=?", function(json) {
             if(json.cod == 200){
                 console.log(json);
                 cities = json.list;

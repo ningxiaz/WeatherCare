@@ -1,9 +1,9 @@
 /*
 Syntax error: Undefined variable: "$h3-font-size".
-        on line 17 of /Users/ningxiaz/Dropbox/Sandbox/WeatherCare/scss/globals.scss
+        on line 18 of /Users/ningxiaz/Dropbox/Sandbox/WeatherCare/scss/globals.scss
 
 Backtrace:
-/Users/ningxiaz/Dropbox/Sandbox/WeatherCare/scss/globals.scss:17
+/Users/ningxiaz/Dropbox/Sandbox/WeatherCare/scss/globals.scss:18
 /Users/ningxiaz/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.1/lib/sass/script/variable.rb:49:in `_perform'
 /Users/ningxiaz/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
 /Users/ningxiaz/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:323:in `visit_variable'
@@ -70,4 +70,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$h3-font-size\".\A         on line 17 of /Users/ningxiaz/Dropbox/Sandbox/WeatherCare/scss/globals.scss"; }
+  content: "Syntax error: Undefined variable: \"$h3-font-size\".\A         on line 18 of /Users/ningxiaz/Dropbox/Sandbox/WeatherCare/scss/globals.scss"; }
