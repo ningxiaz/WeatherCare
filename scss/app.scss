@@ -146,7 +146,7 @@ header{
 			color: $grey-2;
 			font-size: $prompt-font-size;
 			border-bottom: 1px $grey-3 solid;
-			padding: $prompt-font-size/2 $prompt-font-size;
+			padding: ($prompt-font-size * 0.35) ($prompt-font-size * 0.83);
 			cursor: pointer;
 		}
 

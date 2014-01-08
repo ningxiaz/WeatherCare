@@ -7709,12 +7709,12 @@ th.hide-for-touch {
  */
 /* Colors */
 /* Typography */
-/* 16 x 2.25 = 32 */
 /* 16 x 4 = 64 */
 /* 16 x 2.5 = 40 */
 /* 16 x 1.5 = 24 */
 /* 16 x 1.125 = 18 */
 /* 16 x 1 = 16 */
+/* 16 x 2.25 = 32 */
 /* line 28, ../scss/globals.scss */
 body {
   font-size: 100%;
@@ -7741,7 +7741,7 @@ p {
 }
 
 /* Mixins */
-/*
+/*!
  *  Weather Icons Beta 1
  *  Weather themed icons for Bootstrap
  *  ------------------------------------------------------------------------------
@@ -8304,12 +8304,12 @@ input:focus {
 
 /* line 44, ../scss/app.scss */
 .round-button {
-  padding: 0.9375rem 1.6875rem;
-  -webkit-border-radius: 1.6875rem;
-  -moz-border-radius: 1.6875rem;
-  -ms-border-radius: 1.6875rem;
-  -o-border-radius: 1.6875rem;
-  border-radius: 1.6875rem;
+  padding: 0.9375em 1.6875em;
+  -webkit-border-radius: 1.6875em;
+  -moz-border-radius: 1.6875em;
+  -ms-border-radius: 1.6875em;
+  -o-border-radius: 1.6875em;
+  border-radius: 1.6875em;
   background-color: transparent;
   border: 1px white solid;
   color: white;
@@ -8430,15 +8430,15 @@ header .add:hover {
   background: white;
   border: none;
   color: #f1c40f;
-  font-size: 1.6875rem;
+  font-size: 1.6875em;
   width: 100%;
   overflow: hidden;
-  padding: 1.6875rem;
-  -webkit-border-radius: 1.6875rem;
-  -moz-border-radius: 1.6875rem;
-  -ms-border-radius: 1.6875rem;
-  -o-border-radius: 1.6875rem;
-  border-radius: 1.6875rem;
+  padding: 1.19812em 1.40063em;
+  -webkit-border-radius: 1.6875em;
+  -moz-border-radius: 1.6875em;
+  -ms-border-radius: 1.6875em;
+  -o-border-radius: 1.6875em;
+  border-radius: 1.6875em;
   display: block;
 }
 /* line 139, ../scss/app.scss */
@@ -8455,9 +8455,9 @@ header .add:hover {
 /* line 145, ../scss/app.scss */
 .search-page .suggestions .item {
   color: #999999;
-  font-size: 1.6875rem;
+  font-size: 1.6875em;
   border-bottom: 1px #cccccc solid;
-  padding: 0.84375rem 1.6875rem;
+  padding: 0.59062em 1.40063em;
   cursor: pointer;
 }
 /* line 153, ../scss/app.scss */

@@ -13,17 +13,17 @@ $placehorder-color: #bdc3c7;
 
 /* Typography */
 
-
 // font scales
-$prompt-font-size: $h3-font-size;
-$weather-icon-font-size: 6.75em;
-$start-prompt-font-size: 2.25em;   /* 16 x 2.25 = 32 */
 
 $h1-font-size: 4em;		/* 16 x 4 = 64 */
 $h2-font-size: 2.5em;		/* 16 x 2.5 = 40 */
 $h3-font-size: 1.5em;		/* 16 x 1.5 = 24 */
 $h4-font-size: 1.125em;     /* 16 x 1.125 = 18 */
 $body-font-size: 1em;		/* 16 x 1 = 16 */
+
+$prompt-font-size: $h3-font-size * 1.125;
+$weather-icon-font-size: 6.75em;
+$start-prompt-font-size: 2.25em;   /* 16 x 2.25 = 32 */
 
 body { font-size: 100%; }
 h1 { font-size: $h1-font-size;  }
@@ -47,7 +47,7 @@ p { font-size: $body-font-size;  }
 }
 
 @mixin big-rounded-box($font-size) {
-    padding: $font-size;
+    padding: ($font-size * 0.71) ($font-size * 0.83);
     @include border-radius($font-size);
 }
 

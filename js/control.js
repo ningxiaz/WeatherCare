@@ -38,6 +38,7 @@ var UIControls = (function(){
             input.attr('placeholder', 'Where are you?');
             search_page.show();
             start_page.fadeOut(200);
+            $('body').data('city_id', '');
         });
 
         input.keyup(function(){
@@ -54,34 +55,39 @@ var UIControls = (function(){
         add_button.click(function(){
             new_weather = {};
             input.val('');
+            $('body').data('city_id', '');
             search_page.slideDown(200);
         });
 
         add_done.click(function(){
-            if(input.val() != undefined || input.val() != ''){
-                city = input.val();
-                WeatherManager.getForcast(city, function(data){
-                    if(data != undefined){
-                        saveForcast(data);
-                        showForcast(new_weather);
-                    }
-                    else{
-                        prompt.text("Sorry! Can't find the place.");
-                    }
+            city_id = $('body').data('city_id');
+
+            if(city_id != undefined && city_id != ''){
+                showCompleteWeatherById(city_id, function(){
+                    search_page.slideUp(200);
+                    places.push(city_id);
+                    current = places.length - 1;
+                    prompt.text('Added successfully!');
                 });
-                WeatherManager.getCurrent(city, function(data){
-                    if(data != undefined){
-                        saveCurrent(data);
-                        console.log(new_weather);
+            }
+            // if user just typed in a string, without choosing from the suggestions
+            else{
+                city = input.val();
+                
+                WeatherManager.searchCities(city, function(cities){
+                    if(cities.length == 0){
+                        prompt.text("Sorry! Can't find the place.");
                         search_page.slideUp(200);
-                        places.push(city);
-                        current = places.length - 1;
-                        prompt.text('Added successfully!');
-                        showCurrent(new_weather);
-                        showTips(new_weather);
                     }
+                    // pick the first city, if there're any match
                     else{
-                        prompt.text('Added successfully!');
+                        city_id = cities[0].id;
+                        showCompleteWeatherById(city_id, function(){
+                            search_page.slideUp(200);
+                            places.push(city_id);
+                            current = places.length - 1;
+                            prompt.text('Added successfully!');
+                        });
                     }
                 });
             }
@@ -93,16 +99,50 @@ var UIControls = (function(){
      */
     function appendSuggestions(cities){
         suggestions.empty();
+        console.log("Here are the cities");
+        console.log(cities);
         for(i = 0; i < cities.length; i++){
-            var city_name = cities[i].name
+            var city_name = cities[i].name + ', ' + cities[i].sys.country;
+            var city_id = cities[i].id;
             if(city_name != undefined && city_name != ''){
-                $("<div class='item' data-city='"+city_name+"'>"+city_name+"</div>").appendTo(suggestions).click(function(event){
-                    city_name = $(event.target).data('city')
+                $("<div class='item' data-city='"+city_name+"' data-id='"+city_id+"''>"+city_name+"</div>").appendTo(suggestions).click(function(event){
+                    city_name = $(event.target).data('city');
                     input.val(city_name);
+                    city_id = $(event.target).data('id');
+                    $('body').data('city_id', city_id);
                     suggestions.empty();
                 });
             }
         }
+    }
+
+    /**
+     * show complete weather information by city ID, with optional callback
+     */
+    function showCompleteWeatherById(city_id, callback){
+        WeatherManager.getCurrent(city_id, function(data){
+            if(data != undefined){
+                saveCurrent(data);
+                showCurrent(new_weather);
+                showTips(new_weather);
+                if(callback && typeof(callback) === 'function'){
+                    callback();
+                }
+            }
+            else{
+                prompt.text("Sorry! Please try again!");
+            }
+        });
+
+        WeatherManager.getForcast(city_id, function(data){
+            if(data != undefined){
+                saveForcast(data);
+                showForcast(new_weather);
+            }
+            else{
+                prompt.text("Sorry! Please try again!");
+            }
+        });
     }
 
     /**
@@ -222,19 +262,7 @@ var UIControls = (function(){
             start_page.css('height', window.innerHeight);
 
             // init with Palo Alto as default
-            city = 'Palo Alto'
-            WeatherManager.getForcast(city, function(data){
-                saveForcast(data);
-                showForcast(new_weather);
-            });
-
-            WeatherManager.getCurrent(city, function(data){
-                saveCurrent(data);
-                places.push(city);
-                current = places.length - 1;
-                showCurrent(new_weather);
-                showTips(new_weather);
-            });
+            showCompleteWeatherById('5380748');
 		}
 	}
 }());

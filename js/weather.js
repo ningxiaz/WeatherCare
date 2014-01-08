@@ -20,7 +20,7 @@ var WeatherManager = (function(){
     }
 
     function getForcast(city, callback){
-        forcast_url = "http://api.openweathermap.org/data/2.5/forecast/daily?mode=json&units=metric&cnt=5&q=";
+        forcast_url = "http://api.openweathermap.org/data/2.5/forecast/daily?mode=json&units=metric&cnt=5&id=";
         $.getJSON(forcast_url + city + "&callback=?", function(json){
             if(json.cod == 200){
                 callback(json);
@@ -32,7 +32,7 @@ var WeatherManager = (function(){
     }
 
     function getCurrent(city, callback){
-        current_url = "http://api.openweathermap.org/data/2.5/weather?mode=json&units=metric&q=";
+        current_url = "http://api.openweathermap.org/data/2.5/weather?mode=json&units=metric&id=";
         $.getJSON(current_url + city + "&callback=?", function(json){
             if(json.cod == 200){
                 callback(json);
