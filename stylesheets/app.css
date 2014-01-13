@@ -8613,6 +8613,6 @@ footer .city-list .city {
 
   /* line 281, ../scss/app.scss */
   .forcast {
-    display: hidden;
+    display: none;
   }
 }
