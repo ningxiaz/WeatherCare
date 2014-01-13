@@ -30,11 +30,13 @@ var UIControls = (function(){
         search_page.css('height', window.innerHeight);
         start_page.css('height', window.innerHeight);
 
-        // make search page always cover the whole view point
-        $(window).resize(function(){
-            search_page.css('height', window.innerHeight);
-            start_page.css('height', window.innerHeight);
-        });
+        // if not mobile, make search page always cover the whole view point
+        if(! detectmob()){
+            $(window).resize(function(){
+                search_page.css('height', window.innerHeight);
+                start_page.css('height', window.innerHeight);
+            });
+        }
 
         start_add.click(function(){
             search_page.css('height', window.innerHeight);
