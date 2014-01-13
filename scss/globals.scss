@@ -15,15 +15,15 @@ $placehorder-color: #bdc3c7;
 
 // font scales
 
-$h1-font-size: 4em;		/* 16 x 4 = 64 */
-$h2-font-size: 2.5em;		/* 16 x 2.5 = 40 */
-$h3-font-size: 1.5em;		/* 16 x 1.5 = 24 */
-$h4-font-size: 1.125em;     /* 16 x 1.125 = 18 */
-$body-font-size: 1em;		/* 16 x 1 = 16 */
+$h1-font-size: 4rem;		/* 16 x 4 = 64 */
+$h2-font-size: 2.5rem;		/* 16 x 2.5 = 40 */
+$h3-font-size: 1.5rem;		/* 16 x 1.5 = 24 */
+$h4-font-size: 1.125rem;     /* 16 x 1.125 = 18 */
+$body-font-size: 1rem;		/* 16 x 1 = 16 */
 
 $prompt-font-size: $h3-font-size * 1.125;
-$weather-icon-font-size: 6.75em;
-$start-prompt-font-size: 2.25em;   /* 16 x 2.25 = 32 */
+$weather-icon-font-size: 6.75rem;
+$start-prompt-font-size: 2.25rem;   /* 16 x 2.25 = 32 */
 
 body { font-size: 100%; }
 h1 { font-size: $h1-font-size;  }
@@ -46,11 +46,6 @@ p { font-size: $body-font-size;  }
     @include border-radius($font-size);
 }
 
-@mixin big-rounded-box($font-size) {
-    padding: ($font-size * 0.71) ($font-size * 0.83);
-    @include border-radius($font-size);
-}
-
 @mixin girl-image($image-size){
     background: url(../images/girl.png) no-repeat;
     background-size: $image-size auto;
@@ -64,7 +59,7 @@ p { font-size: $body-font-size;  }
     font-weight: bolder;
     font-size: $h3-font-size;
     text-align: center;
-    line-height: $size - 3;
+    line-height: $size - rem-calc(3);
     width: $size;
     height: $size;
     @include border-radius($size);

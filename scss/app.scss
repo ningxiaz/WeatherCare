@@ -4,8 +4,8 @@
 @import "weather-icons";
 
 /* Default Styles */
-$header-height: 50px;
-$header-element-size: 40px;
+$header-height: rem-calc(50);
+$header-element-size: rem-calc(40);
 
 body{
 	background-color: $sunny-warm;
@@ -59,12 +59,12 @@ input:focus{
 
 header{
 	width: 100%;
-	padding-top: 10px;
+	padding-top: rem-calc(10);
 
 	.girl{
 		@include girl-image($header-element-size);
 		float: left;
-		margin-right: 5px;
+		margin-right: rem-calc(5);
 	}
 
 	.prompt{
@@ -95,19 +95,20 @@ header{
 	padding-top: 8%;
 
 	.girl{
-		@include girl-image(80px);
+		@include girl-image(rem-calc(80));
 	}
 
 	.prompt{
-		@include small-rounded-box($h3-font-size);
+		padding: 1.6rem 3.6rem;
+    	@include border-radius($start-prompt-font-size * 1.25);
 		font-size: $start-prompt-font-size;
-		line-height: 42px;
+		line-height: $start-prompt-font-size*1.25;
 		color: white;
 		background-color: $sunny-warm-header;
 	}
 
 	#add-current{
-		margin-top: 50px;
+		margin-top: rem-calc(50);
 	}
 }
 
@@ -117,7 +118,7 @@ header{
 	position: absolute;
 	top: 0;
 	z-index: 3; // on top of normal content
-	padding-top: 10px;
+	padding-top: rem-calc(10);
 	display: none;
 
 	.input{
@@ -132,7 +133,8 @@ header{
 			font-size: $prompt-font-size;
 			width: 100%;
 			overflow: hidden;
-			@include big-rounded-box($prompt-font-size);
+			padding: 1.86rem $prompt-font-size;
+			@include border-radius($prompt-font-size);
 			display: block;
 		}
 	}
@@ -140,14 +142,14 @@ header{
 	.suggestions{
 		background-color: white;
 		width: 100%;
-		@include border-radius(5px);
+		@include border-radius(rem-calc(5));
 		position: relative;
 
 		.item {
 			color: $grey-2;
 			font-size: $prompt-font-size;
 			border-bottom: 1px $grey-3 solid;
-			padding: ($prompt-font-size * 0.35) ($prompt-font-size * 0.83);
+			padding: 0.8rem $prompt-font-size;
 			cursor: pointer;
 		}
 
@@ -169,14 +171,14 @@ header{
 
 .main{
 	text-align: center;
-	margin-top: 60px;
+	margin-top: rem-calc(60);
 
 	.basic{
-		margin-bottom: 30px;
+		margin-bottom: rem-calc(30);
 
 		h1.temp{
 			color: white;
-			margin-bottom: 30px;
+			margin-bottom: rem-calc(30);
 			text-align: left;
 		}
 
@@ -190,20 +192,20 @@ header{
 		color: white;
 
 		i{
-			padding-right: 5px;
+			padding-right: rem-calc(5);
 			font-size: $h3-font-size;
 		}
 	}
 
 	.forcast{
 		color: white;
-		margin-top: 40px;
-		padding: 20px 0;
-		margin-left: 10px;
-		margin-right: 10px;
+		margin-top: rem-calc(40);
+		padding: rem-calc(20) 0;
+		margin-left: rem-calc(10);
+		margin-right: rem-calc(10);
 		// border-bottom: 1px white solid;
 		border-top: 1px white solid;
-		margin-bottom: 10px;
+		margin-bottom: rem-calc(10);
 
 		.day-of-week, .forcast-weather-icon, .temp{
 			width: 100%;
@@ -216,7 +218,7 @@ header{
 
 		.forcast-weather-icon{
 			font-size: $h2-font-size;
-			padding: 15px 0;
+			padding: rem-calc(15) 0;
 		}
 
 		.temp{
@@ -227,28 +229,28 @@ header{
 	.tips{
 		color: white;
 		text-align: left;
-		margin: 0 20px;
+		margin: 0 rem-calc(20);
 
 		.girl{
-			@include girl-image($h3-font-size);
+			@include girl-image($prompt-font-size);
 			display: inline-block;
-			margin-right: 5px;
+			margin-right: rem-calc(5);
 		}
 
 		.tip{
 			font-size: $h4-font-size;
 			margin-bottom: 1.25rem;
 			text-rendering: optimizeLegibility;
-			line-height: 1.6;
+			line-height: 1.6rem;
 		}
 	}
 }
 
 footer{
 	width: 100%;
-	margin-top: 60px;
+	margin-top: rem-calc(60);
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: rem-calc(60);
 
 	.city-list{
 		margin: 0 auto;
@@ -264,17 +266,19 @@ footer{
 }
 
 /* Media Queries for Other Screen Sizes */
-// @media #{$small-up} { }
-// @media #{$small-only} { }
+@media #{$small-up} { }
+@media #{$small-only} {
+	html { font-size: 87.5%; }
+}
 
-// @media #{$medium-up} { }
-// @media #{$medium-only} { }
+@media #{$medium-up} { }
+@media #{$medium-only} { }
 
-// @media #{$large-up} { }
-// @media #{$large-only} { }
+@media #{$large-up} { }
+@media #{$large-only} { }
 
-// @media #{$xlarge-up} { }
-// @media #{$xlarge-only} { }
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
 
-// @media #{$xxlarge-up} { }
-// @media #{$xxlarge-only} { }
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }

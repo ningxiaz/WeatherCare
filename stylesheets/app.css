@@ -7722,22 +7722,22 @@ body {
 
 /* line 29, ../scss/globals.scss */
 h1 {
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 /* line 30, ../scss/globals.scss */
 h2 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 /* line 31, ../scss/globals.scss */
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 /* line 32, ../scss/globals.scss */
 p {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /* Mixins */
@@ -8305,12 +8305,12 @@ input:focus {
 
 /* line 45, ../scss/app.scss */
 .round-button {
-  padding: 0.9375em 1.6875em;
-  -webkit-border-radius: 1.6875em;
-  -moz-border-radius: 1.6875em;
-  -ms-border-radius: 1.6875em;
-  -o-border-radius: 1.6875em;
-  border-radius: 1.6875em;
+  padding: 0.9375rem 1.6875rem;
+  -webkit-border-radius: 1.6875rem;
+  -moz-border-radius: 1.6875rem;
+  -ms-border-radius: 1.6875rem;
+  -o-border-radius: 1.6875rem;
+  border-radius: 1.6875rem;
   background-color: transparent;
   border: 1px white solid;
   color: white;
@@ -8328,27 +8328,27 @@ input:focus {
 /* line 60, ../scss/app.scss */
 header {
   width: 100%;
-  padding-top: 10px;
+  padding-top: 0.625rem;
 }
 /* line 64, ../scss/app.scss */
 header .girl {
   background: url(../images/girl.png) no-repeat;
-  background-size: 40px auto;
-  width: 40px;
-  height: 40px;
+  background-size: 2.5rem auto;
+  width: 2.5rem;
+  height: 2.5rem;
   float: left;
-  margin-right: 5px;
+  margin-right: 0.3125rem;
 }
 /* line 70, ../scss/app.scss */
 header .prompt {
   color: white;
-  font-size: 1.125em;
-  padding: 0.625em 1.125em;
-  -webkit-border-radius: 1.125em;
-  -moz-border-radius: 1.125em;
-  -ms-border-radius: 1.125em;
-  -o-border-radius: 1.125em;
-  border-radius: 1.125em;
+  font-size: 1.125rem;
+  padding: 0.625rem 1.125rem;
+  -webkit-border-radius: 1.125rem;
+  -moz-border-radius: 1.125rem;
+  -ms-border-radius: 1.125rem;
+  -o-border-radius: 1.125rem;
+  border-radius: 1.125rem;
   background-color: #f1c40f;
   float: left;
 }
@@ -8357,16 +8357,16 @@ header .add {
   color: white;
   border: 1px white solid;
   font-weight: bolder;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-align: center;
-  line-height: 37px;
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-  border-radius: 40px;
+  line-height: 2.3125rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+  border-radius: 2.5rem;
   cursor: pointer;
   float: right;
 }
@@ -8388,209 +8388,215 @@ header .add:hover {
 /* line 97, ../scss/app.scss */
 .start-page .girl {
   background: url(../images/girl.png) no-repeat;
-  background-size: 80px auto;
-  width: 80px;
-  height: 80px;
+  background-size: 5rem auto;
+  width: 5rem;
+  height: 5rem;
 }
 /* line 101, ../scss/app.scss */
 .start-page .prompt {
-  padding: 0.83333em 1.5em;
-  -webkit-border-radius: 1.5em;
-  -moz-border-radius: 1.5em;
-  -ms-border-radius: 1.5em;
-  -o-border-radius: 1.5em;
-  border-radius: 1.5em;
-  font-size: 2.25em;
-  line-height: 42px;
+  padding: 1.6rem 3.6rem;
+  -webkit-border-radius: 2.8125rem;
+  -moz-border-radius: 2.8125rem;
+  -ms-border-radius: 2.8125rem;
+  -o-border-radius: 2.8125rem;
+  border-radius: 2.8125rem;
+  font-size: 2.25rem;
+  line-height: 2.8125rem;
   color: white;
   background-color: #f1c40f;
 }
-/* line 109, ../scss/app.scss */
+/* line 110, ../scss/app.scss */
 .start-page #add-current {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
-/* line 114, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .search-page {
   background-color: #f1c40f;
   width: 100%;
   position: absolute;
   top: 0;
   z-index: 3;
-  padding-top: 10px;
+  padding-top: 0.625rem;
   display: none;
 }
-/* line 123, ../scss/app.scss */
+/* line 124, ../scss/app.scss */
 .search-page .input {
   margin-top: 18%;
 }
-/* line 126, ../scss/app.scss */
+/* line 127, ../scss/app.scss */
 .search-page .input input#city-input {
   box-shadow: none;
   outline: none;
   background: white;
   border: none;
   color: #f1c40f;
-  font-size: 1.6875em;
+  font-size: 1.6875rem;
   width: 100%;
   overflow: hidden;
-  padding: 1.19812em 1.40063em;
-  -webkit-border-radius: 1.6875em;
-  -moz-border-radius: 1.6875em;
-  -ms-border-radius: 1.6875em;
-  -o-border-radius: 1.6875em;
-  border-radius: 1.6875em;
+  padding: 1.86rem 1.6875rem;
+  -webkit-border-radius: 1.6875rem;
+  -moz-border-radius: 1.6875rem;
+  -ms-border-radius: 1.6875rem;
+  -o-border-radius: 1.6875rem;
+  border-radius: 1.6875rem;
   display: block;
 }
-/* line 140, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 .search-page .suggestions {
   background-color: white;
   width: 100%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0.3125rem;
+  -moz-border-radius: 0.3125rem;
+  -ms-border-radius: 0.3125rem;
+  -o-border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
   position: relative;
 }
-/* line 146, ../scss/app.scss */
+/* line 148, ../scss/app.scss */
 .search-page .suggestions .item {
   color: #999999;
-  font-size: 1.6875em;
+  font-size: 1.6875rem;
   border-bottom: 1px #cccccc solid;
-  padding: 0.59062em 1.40063em;
+  padding: 0.8rem 1.6875rem;
   cursor: pointer;
 }
-/* line 154, ../scss/app.scss */
+/* line 156, ../scss/app.scss */
 .search-page .suggestions .item:hover {
   color: #f1c40f;
 }
-/* line 159, ../scss/app.scss */
+/* line 161, ../scss/app.scss */
 .search-page .cancel {
   color: white;
   border: 1px white solid;
   font-weight: bolder;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-align: center;
-  line-height: 37px;
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-  border-radius: 40px;
+  line-height: 2.3125rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
+  border-radius: 2.5rem;
   cursor: pointer;
   float: right;
 }
-/* line 164, ../scss/app.scss */
+/* line 166, ../scss/app.scss */
 .search-page .cancel:hover {
   background-color: white;
   color: #f1c40f;
 }
 
-/* line 170, ../scss/app.scss */
+/* line 172, ../scss/app.scss */
 .main {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 3.75rem;
 }
-/* line 174, ../scss/app.scss */
+/* line 176, ../scss/app.scss */
 .main .basic {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
-/* line 177, ../scss/app.scss */
+/* line 179, ../scss/app.scss */
 .main .basic h1.temp {
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   text-align: left;
 }
-/* line 183, ../scss/app.scss */
+/* line 185, ../scss/app.scss */
 .main .basic .weather-icon {
   color: white;
-  font-size: 6.75em;
+  font-size: 6.75rem;
 }
-/* line 189, ../scss/app.scss */
+/* line 191, ../scss/app.scss */
 .main .details {
   color: white;
 }
-/* line 192, ../scss/app.scss */
+/* line 194, ../scss/app.scss */
 .main .details i {
-  padding-right: 5px;
-  font-size: 1.5em;
+  padding-right: 0.3125rem;
+  font-size: 1.5rem;
 }
-/* line 198, ../scss/app.scss */
+/* line 200, ../scss/app.scss */
 .main .forcast {
   color: white;
-  margin-top: 40px;
-  padding: 20px 0;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-top: 2.5rem;
+  padding: 1.25rem 0;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
   border-top: 1px white solid;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
-/* line 208, ../scss/app.scss */
+/* line 210, ../scss/app.scss */
 .main .forcast .day-of-week, .main .forcast .forcast-weather-icon, .main .forcast .temp {
   width: 100%;
 }
-/* line 212, ../scss/app.scss */
+/* line 214, ../scss/app.scss */
 .main .forcast .day-of-week {
-  font-weight: 1em;
+  font-weight: 1rem;
   font-weight: bold;
 }
-/* line 217, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 .main .forcast .forcast-weather-icon {
-  font-size: 2.5em;
-  padding: 15px 0;
+  font-size: 2.5rem;
+  padding: 0.9375rem 0;
 }
-/* line 222, ../scss/app.scss */
+/* line 224, ../scss/app.scss */
 .main .forcast .temp {
-  font-weight: 1em;
+  font-weight: 1rem;
 }
-/* line 227, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 .main .tips {
   color: white;
   text-align: left;
-  margin: 0 20px;
+  margin: 0 1.25rem;
 }
-/* line 232, ../scss/app.scss */
+/* line 234, ../scss/app.scss */
 .main .tips .girl {
   background: url(../images/girl.png) no-repeat;
-  background-size: 1.5em auto;
-  width: 1.5em;
-  height: 1.5em;
+  background-size: 1.6875rem auto;
+  width: 1.6875rem;
+  height: 1.6875rem;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 0.3125rem;
 }
-/* line 238, ../scss/app.scss */
+/* line 240, ../scss/app.scss */
 .main .tips .tip {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
-  line-height: 1.6;
+  line-height: 1.6rem;
 }
 
-/* line 247, ../scss/app.scss */
+/* line 249, ../scss/app.scss */
 footer {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 3.75rem;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 3.75rem;
 }
-/* line 253, ../scss/app.scss */
+/* line 255, ../scss/app.scss */
 footer .city-list {
   margin: 0 auto;
 }
-/* line 256, ../scss/app.scss */
+/* line 258, ../scss/app.scss */
 footer .city-list .city {
   display: inline-block;
-  padding: 0.83333em 1.5em;
-  -webkit-border-radius: 1.5em;
-  -moz-border-radius: 1.5em;
-  -ms-border-radius: 1.5em;
-  -o-border-radius: 1.5em;
-  border-radius: 1.5em;
+  padding: 0.83333rem 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  border-radius: 1.5rem;
   background-color: #f1c40f;
   color: white;
 }
 
 /* Media Queries for Other Screen Sizes */
+@media only screen and (max-width: 40em) {
+  /* line 271, ../scss/app.scss */
+  html {
+    font-size: 87.5%;
+  }
+}
