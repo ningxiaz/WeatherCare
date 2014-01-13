@@ -126,7 +126,7 @@ header{
 	display: none;
 
 	.input{
-		margin-top: 18%;
+		margin-top: rem-calc(200);
 
 		input#city-input{
 			box-shadow: none;
@@ -273,6 +273,14 @@ footer{
 @media #{$small-up} { }
 @media #{$small-only} {
 	html { font-size: 87.5%; }
+
+	.prompt{
+		font-size: $h3-font-size;
+	}
+
+	.forcast{
+		hidden;
+	}
 }
 
 @media #{$medium-up} { }
