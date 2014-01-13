@@ -27,6 +27,9 @@ var UIControls = (function(){
      * binding events to the DOM objects
      */
 	function bindUIActions(){
+        search_page.css('height', window.innerHeight);
+        start_page.css('height', window.innerHeight);
+
         // make search page always cover the whole view point
         $(window).resize(function(){
             search_page.css('height', window.innerHeight);

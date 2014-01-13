@@ -8405,12 +8405,18 @@ header .add:hover {
   color: white;
   background-color: #f1c40f;
 }
-/* line 110, ../scss/app.scss */
+@media only screen and (max-width: 40em) {
+  /* line 101, ../scss/app.scss */
+  .start-page .prompt {
+    font-size: 1.5rem;
+  }
+}
+/* line 114, ../scss/app.scss */
 .start-page #add-current {
   margin-top: 3.125rem;
 }
 
-/* line 115, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .search-page {
   background-color: #f1c40f;
   width: 100%;
@@ -8420,11 +8426,11 @@ header .add:hover {
   padding-top: 0.625rem;
   display: none;
 }
-/* line 124, ../scss/app.scss */
+/* line 128, ../scss/app.scss */
 .search-page .input {
   margin-top: 18%;
 }
-/* line 127, ../scss/app.scss */
+/* line 131, ../scss/app.scss */
 .search-page .input input#city-input {
   box-shadow: none;
   outline: none;
@@ -8442,7 +8448,7 @@ header .add:hover {
   border-radius: 1.6875rem;
   display: block;
 }
-/* line 142, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
 .search-page .suggestions {
   background-color: white;
   width: 100%;
@@ -8453,7 +8459,7 @@ header .add:hover {
   border-radius: 0.3125rem;
   position: relative;
 }
-/* line 148, ../scss/app.scss */
+/* line 152, ../scss/app.scss */
 .search-page .suggestions .item {
   color: #999999;
   font-size: 1.6875rem;
@@ -8461,11 +8467,11 @@ header .add:hover {
   padding: 0.8rem 1.6875rem;
   cursor: pointer;
 }
-/* line 156, ../scss/app.scss */
+/* line 160, ../scss/app.scss */
 .search-page .suggestions .item:hover {
   color: #f1c40f;
 }
-/* line 161, ../scss/app.scss */
+/* line 165, ../scss/app.scss */
 .search-page .cancel {
   color: white;
   border: 1px white solid;
@@ -8483,42 +8489,42 @@ header .add:hover {
   cursor: pointer;
   float: right;
 }
-/* line 166, ../scss/app.scss */
+/* line 170, ../scss/app.scss */
 .search-page .cancel:hover {
   background-color: white;
   color: #f1c40f;
 }
 
-/* line 172, ../scss/app.scss */
+/* line 176, ../scss/app.scss */
 .main {
   text-align: center;
   margin-top: 3.75rem;
 }
-/* line 176, ../scss/app.scss */
+/* line 180, ../scss/app.scss */
 .main .basic {
   margin-bottom: 1.875rem;
 }
-/* line 179, ../scss/app.scss */
+/* line 183, ../scss/app.scss */
 .main .basic h1.temp {
   color: white;
   margin-bottom: 1.875rem;
   text-align: left;
 }
-/* line 185, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 .main .basic .weather-icon {
   color: white;
   font-size: 6.75rem;
 }
-/* line 191, ../scss/app.scss */
+/* line 195, ../scss/app.scss */
 .main .details {
   color: white;
 }
-/* line 194, ../scss/app.scss */
+/* line 198, ../scss/app.scss */
 .main .details i {
   padding-right: 0.3125rem;
   font-size: 1.5rem;
 }
-/* line 200, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
 .main .forcast {
   color: white;
   margin-top: 2.5rem;
@@ -8528,31 +8534,31 @@ header .add:hover {
   border-top: 1px white solid;
   margin-bottom: 0.625rem;
 }
-/* line 210, ../scss/app.scss */
+/* line 214, ../scss/app.scss */
 .main .forcast .day-of-week, .main .forcast .forcast-weather-icon, .main .forcast .temp {
   width: 100%;
 }
-/* line 214, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 .main .forcast .day-of-week {
   font-weight: 1rem;
   font-weight: bold;
 }
-/* line 219, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .main .forcast .forcast-weather-icon {
   font-size: 2.5rem;
   padding: 0.9375rem 0;
 }
-/* line 224, ../scss/app.scss */
+/* line 228, ../scss/app.scss */
 .main .forcast .temp {
   font-weight: 1rem;
 }
-/* line 229, ../scss/app.scss */
+/* line 233, ../scss/app.scss */
 .main .tips {
   color: white;
   text-align: left;
   margin: 0 1.25rem;
 }
-/* line 234, ../scss/app.scss */
+/* line 238, ../scss/app.scss */
 .main .tips .girl {
   background: url(../images/girl.png) no-repeat;
   background-size: 1.6875rem auto;
@@ -8561,7 +8567,7 @@ header .add:hover {
   display: inline-block;
   margin-right: 0.3125rem;
 }
-/* line 240, ../scss/app.scss */
+/* line 244, ../scss/app.scss */
 .main .tips .tip {
   font-size: 1.125rem;
   margin-bottom: 1.25rem;
@@ -8569,18 +8575,18 @@ header .add:hover {
   line-height: 1.6rem;
 }
 
-/* line 249, ../scss/app.scss */
+/* line 253, ../scss/app.scss */
 footer {
   width: 100%;
   margin-top: 3.75rem;
   text-align: center;
   margin-bottom: 3.75rem;
 }
-/* line 255, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 footer .city-list {
   margin: 0 auto;
 }
-/* line 258, ../scss/app.scss */
+/* line 262, ../scss/app.scss */
 footer .city-list .city {
   display: inline-block;
   padding: 0.83333rem 1.5rem;
@@ -8595,7 +8601,7 @@ footer .city-list .city {
 
 /* Media Queries for Other Screen Sizes */
 @media only screen and (max-width: 40em) {
-  /* line 271, ../scss/app.scss */
+  /* line 275, ../scss/app.scss */
   html {
     font-size: 87.5%;
   }

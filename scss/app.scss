@@ -105,6 +105,10 @@ header{
 		line-height: $start-prompt-font-size*1.25;
 		color: white;
 		background-color: $sunny-warm-header;
+
+		@media #{$small-only} {
+			font-size: $h3-font-size;
+		}
 	}
 
 	#add-current{
