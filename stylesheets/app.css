@@ -8572,7 +8572,7 @@ header .add:hover {
   font-size: 1.125rem;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
-  line-height: 1.6rem;
+  line-height: 1.5rem;
 }
 
 /* line 253, ../scss/app.scss */
@@ -8612,7 +8612,25 @@ footer .city-list .city {
   }
 
   /* line 281, ../scss/app.scss */
-  .forcast {
+  .main {
+    margin-top: 2.5rem;
+  }
+  /* line 284, ../scss/app.scss */
+  .main .basic {
+    margin-bottom: 1.25rem;
+  }
+  /* line 288, ../scss/app.scss */
+  .main .forcast {
     display: none;
+  }
+  /* line 292, ../scss/app.scss */
+  .main .tips {
+    margin: 1.25rem 0;
+  }
+  /* line 295, ../scss/app.scss */
+  .main .tips .tip {
+    margin-bottom: 0.625rem;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5rem;
   }
 }

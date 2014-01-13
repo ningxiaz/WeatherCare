@@ -243,9 +243,9 @@ header{
 
 		.tip{
 			font-size: $h4-font-size;
-			margin-bottom: 1.25rem;
+			margin-bottom: rem-calc(20);
 			text-rendering: optimizeLegibility;
-			line-height: 1.6rem;
+			line-height: rem-calc(24);
 		}
 	}
 }
@@ -278,8 +278,26 @@ footer{
 		font-size: $h3-font-size;
 	}
 
-	.forcast{
-		display: none;
+	.main{
+		margin-top: rem-calc(40);
+
+		.basic{
+			margin-bottom: rem-calc(20);
+		}
+
+		.forcast{
+			display: none;
+		}
+
+		.tips{
+			margin: rem-calc(20) 0;
+			
+			.tip{
+				margin-bottom: rem-calc(10);
+				text-rendering: optimizeLegibility;
+				line-height: rem-calc(24);
+			}
+		}
 	}
 }
 
