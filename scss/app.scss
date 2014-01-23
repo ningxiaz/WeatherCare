@@ -230,6 +230,7 @@ header{
 		color: white;
 		text-align: left;
 		margin: 0 rem-calc(20);
+		padding-left: rem-calc(8);
 
 		.girl{
 			@include girl-image($prompt-font-size);

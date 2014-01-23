@@ -65,3 +65,25 @@
     }
  }());
 
+
+/**
+ * Girl's prompts to add cities
+ */
+var PromptsForAdd = [
+    {
+        girl: 'Missing someone?',
+        input: 'Where is she/he?'
+    },
+    {
+        girl: 'Going somewhere?',
+        input: 'Where are you going?'
+    },
+    {
+        girl: 'Fancy cities?',
+        input: 'Like where?'
+    },
+    {
+        girl: 'Always wonder?',
+        input: 'A place of wonder?'
+    }
+];

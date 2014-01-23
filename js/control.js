@@ -27,9 +27,6 @@ var UIControls = (function(){
      * binding events to the DOM objects
      */
 	function bindUIActions(){
-        search_page.css('height', window.innerHeight);
-        start_page.css('height', window.innerHeight);
-
         // if not mobile, make search page always cover the whole view point
         if(! detectmob()){
             $(window).resize(function(){
@@ -72,7 +69,7 @@ var UIControls = (function(){
                     search_page.slideUp(200);
                     places.push(city_id);
                     current = places.length - 1;
-                    prompt.text('Added successfully!');
+                    changePrompt();
                 });
             }
             // if user just typed in a string, without choosing from the suggestions
@@ -91,7 +88,7 @@ var UIControls = (function(){
                             search_page.slideUp(200);
                             places.push(city_id);
                             current = places.length - 1;
-                            prompt.text('Added successfully!');
+                            changePrompt();
                         });
                     }
                 });
@@ -104,8 +101,6 @@ var UIControls = (function(){
      */
     function appendSuggestions(cities){
         suggestions.empty();
-        console.log("Here are the cities");
-        console.log(cities);
         for(i = 0; i < cities.length; i++){
             var city_name = cities[i].name + ', ' + cities[i].sys.country;
             var city_id = cities[i].id;
@@ -189,7 +184,6 @@ var UIControls = (function(){
      * display the current weather information
      */
     function showCurrent(weather){
-        console.log(WeatherIcons[weather.weather_icon]);
         if(weather.weather_icon != undefined){
             $('.weather-icon i').removeClass().addClass(WeatherIcons[weather.weather_icon]);
         }
@@ -215,8 +209,6 @@ var UIControls = (function(){
      */
     function showForcast(weather){
         for(i = 1; i < 5; i++){
-            console.log('#day-'+i+' .day-of-week');
-            console.log(weather.forcasts[i].weather_icon);
             $('#day-'+i+' .day-of-week').text(getDayXdaysAhead(i));
             $('#day-'+i+' .forcast-weather-icon i').removeClass().addClass(WeatherIcons[weather.forcasts[i].weather_icon]);
             $('#day-'+i+' .temp span').text(Math.round(CtoF(weather.forcasts[i].temp)));
@@ -258,6 +250,16 @@ var UIControls = (function(){
         });
     }
 
+    /**
+     * Randomly change the prompts
+     */
+    function changePrompt(){
+        random_prompt = PromptsForAdd[Math.floor(Math.random()*PromptsForAdd.length)];
+        console.log(random_prompt);
+        prompt.text(random_prompt.girl);
+        input.attr('placeholder', random_prompt.input);
+    }
+
 	return {
 		init: function(){
 			bindUIActions();
@@ -268,6 +270,7 @@ var UIControls = (function(){
 
             // init with Palo Alto as default
             showCompleteWeatherById('5380748');
-		}
+		},
+        changePrompt: changePrompt
 	}
 }());

@@ -8551,8 +8551,9 @@ header .add:hover {
   color: white;
   text-align: left;
   margin: 0 1.25rem;
+  padding-left: 0.5rem;
 }
-/* line 234, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 .main .tips .girl {
   background: url(../images/girl.png) no-repeat;
   background-size: 1.6875rem auto;
@@ -8561,7 +8562,7 @@ header .add:hover {
   display: inline-block;
   margin-right: 0.3125rem;
 }
-/* line 240, ../scss/app.scss */
+/* line 241, ../scss/app.scss */
 .main .tips .tip {
   font-size: 1.125rem;
   margin-bottom: 1.25rem;
@@ -8569,18 +8570,18 @@ header .add:hover {
   line-height: 1.5rem;
 }
 
-/* line 249, ../scss/app.scss */
+/* line 250, ../scss/app.scss */
 footer {
   width: 100%;
   margin-top: 3.75rem;
   text-align: center;
   margin-bottom: 3.75rem;
 }
-/* line 255, ../scss/app.scss */
+/* line 256, ../scss/app.scss */
 footer .city-list {
   margin: 0 auto;
 }
-/* line 258, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 footer .city-list .city {
   display: inline-block;
   padding: 0.83333rem 1.5rem;
@@ -8595,12 +8596,12 @@ footer .city-list .city {
 
 /* Media Queries for Other Screen Sizes */
 @media only screen and (max-width: 40em) {
-  /* line 271, ../scss/app.scss */
+  /* line 272, ../scss/app.scss */
   html {
     font-size: 87.5%;
   }
 
-  /* line 274, ../scss/app.scss */
+  /* line 275, ../scss/app.scss */
   .start-page .prompt {
     padding: 1rem 2rem;
     font-size: 1.6875rem;
@@ -8612,30 +8613,30 @@ footer .city-list .city {
     line-height: 2.10938rem;
   }
 
-  /* line 282, ../scss/app.scss */
+  /* line 283, ../scss/app.scss */
   .main {
     margin-top: 2.5rem;
   }
-  /* line 285, ../scss/app.scss */
+  /* line 286, ../scss/app.scss */
   .main .basic {
     margin-bottom: 1.25rem;
   }
-  /* line 289, ../scss/app.scss */
+  /* line 290, ../scss/app.scss */
   .main .forcast {
     display: none;
   }
-  /* line 293, ../scss/app.scss */
+  /* line 294, ../scss/app.scss */
   .main .tips {
     margin: 1.25rem 0;
   }
-  /* line 296, ../scss/app.scss */
+  /* line 297, ../scss/app.scss */
   .main .tips .tip {
     margin-bottom: 0.625rem;
     text-rendering: optimizeLegibility;
     line-height: 1.5rem;
   }
 
-  /* line 304, ../scss/app.scss */
+  /* line 305, ../scss/app.scss */
   footer {
     margin-top: 1.875rem;
     text-align: center;
